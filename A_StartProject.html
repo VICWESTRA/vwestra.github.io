@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Project A </title>
+<meta charset="utf-8">
+<!--My Project, Victoria Westra, April 10,2023-->
+<style>
+.top{font-size:22 pt;}
+
+#NPS{
+width: 90%;
+margin-left: auto;
+margin-right: auto;
+border: solid 3px black;
+}
+
+header{background-color:#477D24;
+font-weight:bold;
+color:#CDF0B6;
+border:3px solid #DCEFD0;
+text-align:center;}
+
+
+nav{text-align:right;}
+
+ul.topmenu li{
+display:inline;
+padding: 0px 10px;
+}
+
+ul.topmenu{margin:1px;}
+article{padding:10px;}
+
+h2{
+text-align:center;
+border:3px groove #477D24;
+background-color:#477D24;
+color:#CDF0B6;}
+p{text-align:center;}
+article{
+background-color:#CDF0B6;}
+
+#NPSQUIZ{
+width: 70%;
+border:3px solid #477D24;
+margin-left: auto;
+margin-right: auto;
+background-color:#CDF0B6;
+}
+
+
+</style>
+
+
+
+<script>
+
+function openNav(){
+document.getElementById("navigation").style.width=
+"100%";
+}
+function closeNav(){
+document.getElementById("navigation").style.width=
+"0%";
+}
+totalparks=0;
+for(i=1;i<2;i=i+1)
+{
+number=prompt("Please enter the number of National Parks you have visited ");
+totalparks=totalparks+parseFloat(number);
+}
+alert("You have visited about " + (Math.round((totalparks/63)*100))+"%" +" of all National Parks in the United States (There are 63 total).");
+
+/*I used a For Loop in order to prompt the user for the number of 
+national parks they have visited. I divided this number by the total number
+of national parks in the USA (63). I then rounded off this value, using Math.round
+to give a whole number to the user. This percentage is then alerted to the user
+to let them know the number of parks they have visited.*/
+function quiz1(){
+if (document.formq1.q1[2].checked){
+document.formq1.q1out.value="Correct! The NPS was founded August 25, 1916 by President Woodrow Wilson.";}
+else {
+document.formq1.q1out.value="Incorrect, Please try again";}}
+/*This is my function for quiz one which writes to a textbox below the quesiton
+if the user gets the question right, they are notified. If they are wrong, they
+are asked to try again*/
+function quiz2(){
+if (document.formq2.q2[1].checked){
+alert("That is Correct! There are 63 National Parks in a total of 31 States in the US.");
+}
+else {
+alert("Incorrect, Please try again");}}
+/*Above is my function for quiz 2 which alerts the user when they are right, along with extra information*/
+function quiz3(){
+if(document.formq3.q3b.checked==true){
+alert("Correct! Great Smokey Mountains National Park has the most visitors, with 12.94 million visitors in 2022!");
+}
+else
+if(document.formq3.q3d.checked){
+alert("Correct! Grand Canyon National Park is the second most visited park, with 4.73 million visitors in 2022!");
+}
+if (document.formq3.q3a.checked){
+alert("Incorrect. Acadia is well visited with 3.97 million visitors in 2022, but it is not the most visited.");
+}
+if (document.formq3.q3c.checked){
+alert("Incorrect. Zion is well visited with 4.69 million visitors in 2022, but it is not the most visited.");
+}}
+/*In my function for quiz 3, it will alert the users whether their answer is right or wrong
+as well as how many visitors their selected park received in 2022*/
+
+function quiz4(){
+if(document.formq4.question4.selectedIndex==1)
+{
+alert("Yes! Acadia is my favorite park! I go every year with my family!");
+}
+else{
+alert("try again!");
+}}
+/*In the function for quiz 4, it alerts users when they are correct*/
+
+</script>
+<link rel="stylesheet" href="projectstyle.css">
+</head>
+
+<body>
+<div id="navigation">
+<a id="closing" href="javascript://" 
+onclick="closeNav()"> CLOSE MENU </a>
+<div class="myLinks">
+<a href="A_StartProject.html" >
+Home Page! </a><br>
+<a href="B_StartProject.html">
+Acadia National Park!</a><br>
+<a href="C_StartProject.html"
+>Glacier National Park! </a><br>
+<a href="D_StartProject.html" >Sources! </a><br>
+</div>
+</div>
+
+<h3 id="menu">
+<span onclick="openNav()">
+MENU
+</span>
+</h3>
+
+
+<div id="NPS">
+<header><h1 class="top">National Park
+Service</h1></header>
+<nav>
+<ul class="topmenu">
+<li><a
+href="https://www.nps.gov/findapark/index.htm"
+target="_blank">Find a Park</a></li>
+<li><a
+href="https://www.nps.gov/aboutus/workwithus.htm"
+target="_blank">Apply for a Job</a></li>
+<li><a
+href="https://www.nps.gov/planyourvisit/passes.htm
+" target="_blank">Park Passes</a></li>
+</ul>
+</nav>
+<!-- In the above navigation, I have included links to various sites 
+including finding a park, applying for a park job, and how to secure a park pass -->
+
+<article>
+<section>
+<h2>History</h2>
+<p>The first national park created was Yellowstone
+National Park, which was founded in 1872. At this
+time, there was no state government to manage the
+park, so the federal government served full
+control, via the Department of the Interior. A
+movement began to have an independent agency to
+oversee federal lands, spearheaded by Robert
+Sterling Yard and Stephen Mather. Yard and Mather
+ran a publicity campaign to for the Department of
+the Interior, writing articles praising park
+qualities and benefits. This campaign resulted in
+the creation of the National Parks Service on
+August 25, 1916. The National Park Service Organic
+Act was signed by Woodrow Wilson which mandated
+the NPS to conserve the scenery and wildlife of
+the National Parks. Mather was the first director
+of the NPS (National Park Service, 2023). </p>
+</section>
+
+
+<section>
+<h2>President Theodore Roosevelt Involvement</h2>
+
+<p> Roosevelt is often called the “Conservation
+President,” because of how much he impacted the
+National Parks system. During his presidency from
+1901-1909, he signed legislation to establish five
+new national parks: Crater Lake, Oregon; Wind
+Cave, South Dakota; Sullys Hill, North Dakota;
+Mesa Verde, Colorado; and Platt, Oklahoma.<br><img src="Images/theodore.jpeg" alt="President" height="200" width="auto"><br> He had
+also proclaimed four national monuments during his
+presidency. By the end of his term, he had
+reserved six predominantly cultural areas and
+twelve predominantly national areas (“Theodore
+Roosevelt and the National Park System.”). </p>
+
+</section>
+
+
+<section>
+<h2>The National Park Service</h2>
+<p>The NPS mission is to preserve the natural and
+cultural Resources and Values of the National Park
+System for the education and enjoyment of future
+generations. There are approximately 20,000
+employees who help in this conservation. The NPS
+is a bureau of the U.S. Department of the Interior
+and is led by a director nominated by the
+President and confirmed by the Senate.<br><img src="Images/Arrowhead.jpg" alt="emblem" height="200" width="auto"><br>  The emblem
+was authorized in 1951 and its components are
+inspired by key attributes of the National Parks
+system. There is a sequoia tree and bison to
+represent vegetation and wildlife, mountains and
+water to represent scenic and recreational values,
+and the arrowhead to represent historical values
+(What We do; U.S. National Park Service).</p>
+
+</section>
+</article>
+</div>
+<br><br><br><br><br><br><br><br>
+<div id="NPSQUIZ">
+<h2> National Parks Service Quiz!! </h2>
+<form name="formq1">
+<h3> 1. In what year was the National Park Service
+founded? </h3>
+
+<input type="radio" name="q1"
+onclick="quiz1();">1897<br>
+<input type="radio" name="q1"
+onclick="quiz1();">1907<br>
+<input type="radio" name="q1"
+onclick="quiz1();">1916<br>
+<input type="radio" name="q1"
+onclick="quiz1();">1926<br>
+<input type="text" name="q1out" size="100">
+</form>
+
+<form name="formq2">
+<h3> 2. How many National Parks are in the USA?
+</h3>
+<input type="radio" name="q2"
+onclick="quiz2();">45<br>
+<input type="radio" name="q2"
+onclick="quiz2();">63<br>
+<input type="radio" name="q2"
+onclick="quiz2();">72<br>
+<input type="radio" name="q2"
+onclick="quiz2();">85<br>
+</form>
+
+<form name="formq3">
+<h3> 3. Select the top 2 most visited National
+Parks: </h3>
+<input type="checkbox" name="q3a" >Acadia National
+Park<br>
+<input type="checkbox" name="q3b">Great Smokey
+Mountains National Park<br>
+<input type="checkbox" name="q3c" >Zion National
+Park<br>
+<input type="checkbox" name="q3d" >Grand Canyon
+National Park<br>
+<input type="button" value="click"
+onclick="quiz3();">
+</form>
+
+<form name="formq4">
+<h3> 4. What is my favorite National Park? </h3>
+<select name="question4">
+<option> Shenandoah National Park </option>
+<option> Acadia National Park </option>
+<option>Glacier National Park</option>
+<option> Yellowstone National Park</option>
+</select>
+<input type="button" value="click"
+onclick="quiz4();"><br><br>
+</form>
+</div>
+<!-- In this quiz, I have included multiple question types, including radio buttons, 
+check boxes, and drop down menus-->
+<br><br><br><br>
+<br><br><br><br>
+</body>
+</html>

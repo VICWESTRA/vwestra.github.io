@@ -1,0 +1,54 @@
+#closing{
+position:absolute;
+right:40pt;
+color:#CDF0B6;
+font-size:20pt;
+border:6px groove #DCEFD0;
+height:46px;
+background-color:#153003;
+}
+.myLinks{
+position:relative;
+top:20%;
+width:100%;
+text-align:center;
+}
+.myLinks a{
+display:block;
+font-size:22pt;
+font-weight:bold;
+color:#CDF0B6;
+line-height:200%;
+border:6px double #DCEFD0;
+height:40pt;
+width:500px;
+margin:auto;
+background-color:#153003;
+}
+#navigation{
+position: fixed;
+width:0;
+height:60%;
+z-index:1;
+overflow-x:hidden;
+background-color:#27571F;
+opacity:0.6;
+transition:2s;
+}
+body{background-color: #C5E0C0;
+color:#27571F;}
+#menu{
+background-color:#477D24;
+font-weight:bold;
+color:#CDF0B6;
+border:3px groove #DCEFD0;
+font-size:18pt;
+width:120px;
+height: 43px;
+text-align:center;
+line-height:165%;
+}
+/*This external style sheet includes style for the navigation bar at the top as well as
+style for the body of every page.*/
+
+	

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Project C: Glacier </title>
+<meta charset="utf-8">
+<!--My Project, Victoria Westra, April 10,2023-->
+<style>
+.large{width:50px;
+height:50px;
+color:#CDF0B6;
+background-color: #477D24;}
+
+h2{
+text-align:center;
+border:3px groove #477D24;
+width:75%;
+margin-left: auto;
+margin-right: auto;
+background-color:#CDF0B6;
+}
+table{
+border:3px solid #477D24;
+margin-left: auto;
+margin-right: auto;
+background-color:#CDF0B6;
+}
+
+#NPS{
+width: 90%;
+margin-left: auto;
+margin-right: auto;
+border: solid 3px black;
+text-align:justify;
+}
+
+header{background-color:#477D24;
+font-weight:bold;
+color:#CDF0B6;
+border:3px solid #DCEFD0;
+text-align:center;}
+
+p{
+margin-left:10px;
+margin-right:10px;}
+
+h4{
+text-align:center;}
+
+</style>
+<script>
+function openNav(){
+document.getElementById("navigation").style.width="100%";
+}
+function closeNav(){
+document.getElementById("navigation").style.width="0%";
+}
+
+
+function slideright()
+{
+var big=document.getElementById("pic5").src;
+document.getElementById("pic5").src=
+document.getElementById("pic4").src;
+
+document.getElementById("pic4").src=
+document.getElementById("pic3").src;
+
+document.getElementById("pic3").src=
+document.getElementById("pic2").src;
+
+document.getElementById("pic2").src=
+document.getElementById("pic1").src;
+document.getElementById("pic1").src=big;
+}
+function slideleft() {
+var big = document.getElementById("pic1").src;
+document.getElementById("pic1").src= 
+document.getElementById("pic2").src;
+
+document.getElementById("pic2").src= 
+document.getElementById("pic3").src;
+
+document.getElementById("pic3").src=
+document.getElementById("pic4").src;
+ 
+document.getElementById("pic4").src= 
+document.getElementById("pic5").src;
+document.getElementById("pic5").src=big;
+}
+
+/*above is a manual slideshow of images from Glacier. These are all images that I have 
+taken on my trips to Glacier. The user can press the buttons on the left and right side to
+move the images along.*/
+
+</script>
+<link rel="stylesheet" href="projectstyle.css">
+</head>
+
+<body>
+<div id="navigation">
+<a id="closing" href="javascript://" 
+onclick="closeNav()"> CLOSE MENU </a>
+<div class="myLinks">
+<a href="A_StartProject.html" > Home Page! </a><br>
+<a href="B_StartProject.html"> Acadia National Park!</a><br>
+<a href="C_StartProject.html" >Glacier National Park! </a><br>
+<a href="D_StartProject.html" >Sources! </a><br>
+</div>
+</div>
+
+<h3 id="menu">
+<span onclick="openNav()">
+MENU
+</span>
+</h3>
+
+<div id="NPS">
+<header><h1 class="top">Glacier National Park</h1></header>
+<section>
+<h2>About Glacier</h2>
+<p> Glacier National Park is Located in northwestern Montana, along the Canadian Border.
+The park contains over one million acres and encompasses two mountain ranges: subranges of the Rocky Mountains.
+Glacier also hold over 1,000 species of plants, hundreds of animal species, and more than 130 lakes!
+It has been coined the "Crown of the Continent Ecosystem". 
+The park still has most of the original native animal and plant species. 
+There are large mammals like <a target="_blank" href="https://en.wikipedia.org/wiki/Grizzly_bear"> Grizzly bears</a> , <a target="_blank" href="https://en.wikipedia.org/wiki/Mountain_goat" > mountain goats </a> , <a target="_blank" href="https://en.wikipedia.org/wiki/Moose" > moose</a> , 
+and endangered species such as <a target="_blank" href="https://en.wikipedia.org/wiki/Canada_lynx">Canadian Lynxes</a>  and <a target="_blank" href="https://en.wikipedia.org/wiki/Wolverine">wolverines</a>.
+<br> <br>Listen to a grizzly bear roar!<br><br>
+<audio controls>
+<source src="grizzly.mp3" type="audio/mpeg">
+</audio><br>
+<br>
+Glacier has multiple ecosystems from tundra to prairie, where some ecosystems are privy to forest fires. There has been a fire every year of the parks existence, except for 1964. The most fires on record occurred in 1936, with 64 fires.
+The park borders <a target="_blank" href="https://en.wikipedia.org/wiki/Waterton_Lakes_National_Park"> Waterton Lakes National Park</a> , which is a park in Canada (Glacier National Park, 2023).</p>
+</section>
+<!-- I have included links for a few of the items in this paragraph, such as animals 
+and other parks. These links go to websites which give more information about the topic. -->
+
+<section>
+<h2>Glaciers and Climate Change.</h2>
+<h4> <a href="https://en.wikipedia.org/wiki/Glacier_National_Park_(U.S.)" target="_blank"><img src="Images/glaciers.jpg" alt="glacier" width="700" height="auto"></a></h4>
+<!-- I have embedded a link for the image above which links to the source it came from. -->
+<p>
+The mountains of Glacier National Park were carved by glaciers of the last ice age.
+The vast majority of these glaciers have since melted over the last 12,000 years, and remaining glaciers continue to melt due to rising climate temperatures.
+One of the most prominent glaciers is <a target="_blank" href="https://en.wikipedia.org/wiki/Grinnell_Glacier">Grinnell Glacier</a> which was named after George Bird Grinnell, and early American Conservationist, who was an advocate for Glacier National Park's creation. 
+Grinnell is the most photographed glacier in the park, located in the Lewis Range at Many Glacier, at an altitude of around 7,000 feet.
+Between 1966 and 2005, Grinnell has lost around 40% of its size and glaciologists predict that projections continue at this rate, all the glaciers in the park will disappear by 2030.
+(Glacier National Park, 2023).</p>
+<br><h4>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ur4I8tYnxP4"></iframe>
+ </h4><br>
+<!-- Here, I have included a youtube video about climate change in Glacier National Park which I found on youtube. -->
+</section>
+</div> 
+<h2>My Pictures from Glacier!</h2>
+<div id="show">
+<table>
+<tr>
+<th><input value="&lt;" type="button" class="large" onclick="slideleft();"></th>
+<th><img id="pic1" src="Images/window.jpg" alt="pic1" height="100" width="auto"></th>
+<th><img id="pic2" src="Images/sunset.jpg" alt="pic2" height="100" width="auto"></th>
+<th><img id="pic3" src="Images/cabin.jpg" alt="pic3" height="250" width="auto"></th>
+<th><img id="pic4" src="Images/mountain.jpg" alt="pic4" height="100" width="auto"></th>
+<th><img  id="pic5" src="Images/lake.jpg" alt="pic5" height="100" width="auto"></th>
+<th><input value="&gt;" type="button" class="large" onclick="slideright();"></th>
+</tr>
+</table>
+</div>
+<!-- Above is my slideshow with images from Glacier. -->
+
+
+
+</body>
+</html>

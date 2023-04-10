@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Project B: Acadia </title>
+<meta charset="utf-8">
+<!--My Project, Victoria Westra, April 10,2023-->
+<style>
+input{width:100%;}
+h2{
+text-align:center;
+border:3px groove #477D24;
+background-color:#477D24;
+color:#CDF0B6;}
+table{
+border:3px solid #477D24;
+margin-left: auto;
+margin-right: auto;
+}
+.cols{
+columns: 100px 3;
+column-rule: 3px solid #477D24;
+text-align: justify;
+}
+.dropdown{
+text-align:center;
+}
+</style>
+<script>
+function openNav(){
+document.getElementById("navigation").style.width="100%";
+}
+function closeNav(){
+document.getElementById("navigation").style.width="0%";
+}
+
+var timer_on;
+
+function changepic (thepic){
+document.getElementById("largepic").src=thepic.src;
+document.getElementById("words").innerHTML=thepic.alt;
+}
+
+function startslideshow(piccount){
+if (timer_on==false) {return}
+crazy=document.getElementById("pic"+ piccount);
+
+changepic(crazy);
+
+new_piccount = piccount + 1;
+
+if (new_piccount > 4)
+{new_piccount=1}
+setTimeout("startslideshow(new_piccount)", 3000)
+}
+/* The above function gives a slideshow inside of a table. The user can either manually click through the images so that the smaller
+images show in the larger image spot, or they can press start slideshow. The slideshow displays the images for 4 seconds each and includes 
+a small description of what the image shows.*/
+var wid = "250";
+var hei = "250";
+function img_popup(form) {
+selectionname = form.imagename.options[form.imagename.selectedIndex].text;
+selection = form.imagename.options[form.imagename.selectedIndex].value;
+Popup = window.open("", "PREVIEW", "toolbar=0,resize=0,status=0,menubar=0,scrollbars=0,width="+wid+",height="+hei);
+Popup.document.open();
+Popup.document.write("<html><title>Preview</title>");
+Popup.document.write("<body BGCOLOR=FFFFFF>");
+Popup.document.write("<form><center>" + selectionname + "<hr>");
+Popup.document.write("<img hspace=0 vspace=0 " + "src='" + selection + "'>");
+Popup.document.write("<hr><input type='button' value='Close' " + "onClick='window.close()'></form>");
+Popup.document.write("</center></body></html>");
+Popup.document.close();
+}
+/* Script by hscripts.com */
+/*the function above was obtained from hscripts.com. This function generates a drop down menu and when one of the options is clicked, it opens into a new tab showing an image of the selected item. In the opened tab, there is a description of the image and a button to close the window. */
+</script>
+
+
+
+<link rel="stylesheet" href="projectstyle.css">
+</head>
+
+<body>
+<div id="navigation">
+<a id="closing" href="javascript://" 
+onclick="closeNav()"> CLOSE MENU </a>
+<div class="myLinks">
+<a href="A_StartProject.html" > Home Page! </a><br>
+<a href="B_StartProject.html"> Acadia National Park!</a><br>
+<a href="C_StartProject.html">Glacier National Park! </a><br>
+<a href="D_StartProject.html">Sources! </a><br>
+</div>
+</div>
+
+<h3 id="menu">
+<span onclick="openNav()">
+MENU
+</span>
+</h3>
+
+<h2> Acadia National Park</h2>
+<br>
+<!-- I used the class "cols" in order to add style and turn the paragraphs into 3 columns with dividers in between -->
+<div class="cols">
+<h4>About the Park</h4>
+Acadia National Park is located in Coastal Maine, primarily on Mount Desert Island, with other portions on smaller islands. 
+The park was established in 1916 and was named after the French settlers who were expelled from Atlantic Canada By the British.
+The park contains 49,052 acres of land and receives over 3.5 million visitors each year! (Yogerst, 2019).
+Acadia contains the tallest mountain on the Atlantic Coast of the United States, better known as Cadillac Mountain. Cadillac Mountain is also one of the first places in the United States to see the sun rise! ("Acadia National Park").
+<h4> Geography</h4>
+There are 26 significant mountains which rise in Acadia, offering expansive views of lakes, forests, islands, and the ocean. The mountains range from 284 feet tall (Flying Mountain) to 1,530 feet tall (Cadillac Mountain).
+The main attraction in Acadia is Park Loop road, which is a 27-mile road that leads to many scenic viewpoints, trailheads, and to the top of Cadillac Mountain. Some prominent features along the road are Champlain Mountain, the Beehive, Sand Beach, Thunder Hole, Gorham Mountain, Otter Cliff, Otter Cove, Jordan Pond, and Eagle Lake ("Acadia National Park").
+<h4> The Fire of 1947</h4>
+In 1947, the most influential forest fire in Acadia history occurred, where over 10,000 acres of the park burned and an additional 7,000 acres of Mount Desert Island burned. 
+The fire began on October 17, 1947 and continued burning until November 14th, 1947. The following restoration of the park was financially supported by the Rockefeller family. 
+("Acadia National Park").</div>
+<br><br>
+<h2> Select a Mountain from the Pull down to see a picture!</h2>
+<form class="dropdown">
+<select NAME="imagename" onChange="img_popup(this.form)">
+<option value="Images/cadillac.jpg" SELECTED>Cadillac Mountain
+<option value="Images/Dorr.jpg" >Dorr Mountain
+<option value="Images/sargent.jpg">Sargent Mountain
+<option value="Images/pemetic.jpg">Pemetic Mountain
+<option value="Images/penobscot.jpg">Penobscot Mountain
+<option value="Images/bernard.jpg">Bernard Mountain
+<option value="Images/champlain.jpg">Champlain Mountain
+<option value="Images/bubble.jpg">North Bubble Mountain
+</select>
+</form> 
+<!-- Script by hscripts.com. The above code goes with the function obtained from hscripts.com. It displays a drop down menu
+with various mountains in Acadia National Park.  -->
+<br><br><br><br>
+<table>
+<tr>
+<th colspan="4"> <h2>My Pictures of Acadia</h2> </th>
+</tr>
+<tr>
+<th colspan="4"> Click to see larger image. </th>
+</tr>
+<tr>
+<td>
+  <img id="pic1" src="Images/pebblebeach.jpg" alt="Pebble Beach, Park Loop Road" onclick="changepic(this);" width="100" height="auto" >
+</td>
+<td>
+  <img id="pic2" src="Images/sandbeach.jpg" alt="Sand Beach, Park Loop Road" onclick="changepic(this);" width="100" height="auto" >
+</td>
+<td>
+  <img id="pic3" src="Images/greathead.jpg" alt="Rocks at Sand Beach" onclick="changepic(this);" width="100" height="auto" >
+</td>
+<td>
+  <img id="pic4" src="Images/jordanpond.jpg" alt="Jordan Pond" onclick="changepic(this);" width="100" height="auto" >
+</td>
+</tr>
+<tr>
+<td colspan="4">
+<img id="largepic" src="Images/valleycove.jpg" alt="Valley Cove"  width="412" height="auto" >
+</td>
+</tr>
+<tr>
+<th colspan="4" id="words"> Valley Cove, Southwest Harbor </th>
+</tr>
+<tr>
+<td colspan="4"> <input type="button" value="Start Slideshow" onclick="timer_on=true; startslideshow(1);"> </td>
+</tr>
+<tr>
+<td colspan="4"> <input type="button" value="Stop Slideshow" onclick="timer_on=false;"> </td>
+</tr>
+</table>
+<!-- The table above goes with the slideshow function. These are all Images that I have taken on my trips to Acadia!! -->
+</body>
+</html>
